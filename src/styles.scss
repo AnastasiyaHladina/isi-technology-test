@@ -1,1 +1,168 @@
-/* You can add global styles to this file, and also import other style files */
+html { height: 100%; }
+body { background-color: #eef0f8; }
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Colors: */
+$color-ef7da0: #EF7DA0;
+$color-f44682: #F44682;
+$color-c1174b: #c1174b;
+$color-eff0f4: #EFF0F4;
+$color-f4f5f8: #F4F5F8;
+$color-66bb6a: #66BB6A;
+$color-295e2a: #295e2a;
+$color-ccd2e2: #CCD2E2;
+$color-a4a4b5: #A4A4B5;
+$color-f3f6f9: #F3F6F9;
+$color-3f4254: #3F4254;
+$color-bed4ea: #bed4ea;
+$color-8bc2f9: #8bc2f9;
+$color-2e8ff0: #2E8FF0;
+$color-236db8: #236db8;
+$color-505271: #505271;
+$color-ebedf3: #EBEDF3;
+$color-ffffff: #FFFFFF;
+$color-eef0f8: #EEF0F8;
+
+/* Font/text values */
+$font-family-helvetica: Helvetica;
+$font-style-normal: normal;
+$font-weight-300: 300px;
+$font-weight-bold: bold;
+$font-weight-lighter: lighter;
+$font-weight-normal: normal;
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$character-spacing-0: 0px;
+$line-spacing-16: 16px;
+$line-spacing-17: 17px;
+$line-spacing-19: 19px;
+$text-transform-uppercase: uppercase;
+
+/* Character Styles */
+.table-head {
+  font-family: $font-family-helvetica;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-13;
+  line-height: $line-spacing-16;
+  letter-spacing: $character-spacing-0;
+  color: $color-a4a4b5;
+  text-transform: $text-transform-uppercase;
+}
+//light
+.style-2 {
+  font-family: $font-family-helvetica;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-13;
+  line-height: $line-spacing-16;
+  letter-spacing: $character-spacing-0;
+  color: $color-ffffff;
+}
+
+.danger__text {
+  font-family: $font-family-helvetica;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-13;
+  line-height: $line-spacing-16;
+  letter-spacing: $character-spacing-0;
+  color: $color-ef7da0;
+}
+
+.basic-lighter__text {
+  font-family: $font-family-helvetica;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-lighter;
+  font-size: $font-size-13;
+  line-height: $line-spacing-16;
+  letter-spacing: $character-spacing-0;
+  color: $color-3f4254;
+}
+
+.basic__text {
+  font-family: $font-family-helvetica;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-13;
+  line-height: $line-spacing-16;
+  letter-spacing: $character-spacing-0;
+  color: $color-3f4254;
+}
+
+.user-card__title {
+  font-family: $font-family-helvetica;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-16;
+  line-height: $line-spacing-19;
+  letter-spacing: $character-spacing-0;
+  color: $color-3f4254;
+}
+//light__text
+.light__text {
+  font-family: $font-family-helvetica;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-14;
+  line-height: $line-spacing-17;
+  letter-spacing: $character-spacing-0;
+  color: $color-ffffff;
+}
+
+.primary-button {
+  & > input {
+    font: 15px Arial, serif;
+    text-decoration: none;
+    float: right;
+    padding: 12px 16px;
+    border: none;
+    color: $color-ffffff;
+    border-radius: 5px;
+  }
+  .active {
+    background-color: $color-2e8ff0;
+
+    &:hover {
+      background-color: $color-236db8;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $color-8bc2f9;
+    }
+  }
+
+  .disabled {
+    color: $color-505271;
+    background-color: $color-bed4ea;
+    cursor: not-allowed;
+  }
+}
+
+.danger-button {
+  & > input {
+    font: 15px Arial, serif;
+    text-decoration: none;
+    float: right;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 5px;
+    color: $color-ffffff;
+    background-color: $color-ef7da0;
+
+    &:hover {
+      background-color: $color-f44682;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $color-c1174b;
+    }
+  }
+}

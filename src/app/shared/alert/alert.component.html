@@ -1,0 +1,8 @@
+<div
+  *ngIf="alert$ | async as alert"
+  [ngClass]="{ success__alert: alert.successful, danger__alert: !alert.successful }"
+  class="alert">
+  <h2 class="light__text"> {{ alert.title }} </h2>
+  <p> {{ alert.subTitle }} </p>
+</div>
+

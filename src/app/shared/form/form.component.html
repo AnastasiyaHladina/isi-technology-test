@@ -1,0 +1,108 @@
+<form role="form" novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form_input">
+    <label class="basic__text" for="userName">User name<small>*</small></label>
+    <input
+      type="text"
+      id="userName"
+      class="basic-lighter__text"
+      [ngClass]="{'input-danger': isInputInvalid('userName')}"
+      placeholder="Enter user name"
+      formControlName="userName"/>
+    <label class="danger__text mt-3" for="userName" *ngIf="isInputInvalid('userName')">*Required</label>
+  </div>
+
+  <div class="form_input">
+    <label class="basic__text" for="firstName">First name<small>*</small></label>
+    <input
+      type="text"
+      id="firstName"
+      class="basic-lighter__text"
+      [ngClass]="{'input-danger': isInputInvalid('firstName')}"
+      placeholder="Enter first name"
+      formControlName="firstName"
+    />
+    <label class="danger__text mt-3" for="firstName" *ngIf="isInputInvalid('firstName')">*Required</label>
+  </div>
+
+  <div class="form_input">
+    <label class="basic__text" for="lastName">Last name<small>*</small></label>
+    <input
+      type="text"
+      id="lastName"
+      class="basic-lighter__text"
+      [ngClass]="{'input-danger': isInputInvalid('lastName')}"
+      placeholder="Enter last name"
+      formControlName="lastName"
+    />
+    <label class="danger__text mt-3" for="lastName" *ngIf="isInputInvalid('lastName')">*Required</label>
+  </div>
+
+  <div class="form_input">
+    <label class="basic__text" for="email">Email<small>*</small></label>
+    <input
+      type="text"
+      id="email"
+      class="basic-lighter__text"
+      [ngClass]="{'input-danger': isInputInvalid('email')}"
+      placeholder="Enter email"
+      formControlName="email"
+    />
+    <label class="danger__text mt-3" for="email" *ngIf="isInputInvalid('email')">*Required</label>
+  </div>
+
+  <div class="form_input">
+    <label class="basic__text" for="userType">User Type<small>*</small></label>
+    <select
+      name="userType"
+      id="userType"
+      class="basic-lighter__text"
+      [ngClass]="{'input-danger': isInputInvalid('type')}"
+      formControlName="userType">
+      <option *ngFor="let type of types" value="{{type}}" [selected]="type === user.userType"> {{ type | role }} </option>
+    </select>
+    <label class="danger__text mt-3" for="userType" *ngIf="isInputInvalid('type')">*Required</label>
+  </div>
+
+  <div class="form_input">
+    <label class="basic__text" for="password">Password<small>*</small></label>
+    <input
+      type="password"
+      id="password"
+      class="basic-lighter__text"
+      [ngClass]="{'input-danger': isInputInvalid('password')}"
+      placeholder="Enter password"
+      formControlName="password"
+    />
+    <label class="danger__text mt-3" for="password" *ngIf="isInputInvalid('password')">*Required</label>
+  </div>
+
+  <div class="form_input">
+    <label class="basic__text" for="passwordConfirm">Password confirmation<small>*</small></label>
+    <input
+      type="password"
+      id="passwordConfirm"
+      class="basic-lighter__text"
+      formControlName="passwordConfirm"
+      placeholder="Enter password again" />
+  </div>
+
+  <div class="danger__text">
+    {{ form.errors?.['confirmedValidator'] }}
+  </div>
+
+  <div class="form-buttons__container">
+    <app-primary-button
+      buttonType="submit"
+      [buttonTitle]="!!(user.userName) ? 'Update' : 'Create'"
+      [disabled]="form.invalid">
+    </app-primary-button>
+
+    <ng-container *ngIf="user?.userName">
+      <app-danger-button
+        buttonTitle="Delete"
+        buttonType="button"
+        (buttonClick)="onDelete()">
+      </app-danger-button>
+    </ng-container>
+  </div>
+</form>

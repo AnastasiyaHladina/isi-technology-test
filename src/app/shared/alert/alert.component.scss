@@ -1,0 +1,29 @@
+@import './../../../styles';
+
+.alert {
+  position: absolute;
+  padding: 8px;
+  border-radius: 5px;
+  width: 300px;
+
+  & > p {
+    margin: 0 10px;
+  }
+
+  & > h2 {
+    margin: 0;
+  }
+
+}
+
+.success__alert {
+  background-color: $color-66bb6a;
+  box-shadow: 0 0 10px $color-66bb6a;
+  color: $color-295e2a;
+}
+
+.danger__alert {
+  background-color: $color-ef7da0;
+  box-shadow: 0 0 10px $color-ef7da0;
+  color: $color-c1174b;
+}

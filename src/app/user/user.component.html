@@ -1,0 +1,43 @@
+<div class="alert-container">
+  <app-alert></app-alert>
+</div>
+
+<div class="user-list__container">
+  <div class="content">
+    <app-primary-button [buttonTitle]="'Create user'" [routerLink]="['create']" [buttonType]="'button'"></app-primary-button>
+    <div class="user_list__container">
+      <table>
+        <thead>
+          <tr class="table-head">
+            <td>Username</td>
+            <td>First</td>
+            <td>Last</td>
+            <td>Email</td>
+            <td>Type</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users$ | async"
+            [routerLink]="['edit', user.userName]"
+            [ngClass]="{ disabled: user?.userType === 0 }"
+            class="basic__text">
+            <td> {{ user?.userName }} </td>
+            <td> {{ user?.firstName }} </td>
+            <td> {{ user?.lastName }} </td>
+            <td> {{ user?.email }} </td>
+            <td> {{ user?.userType | role }} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+

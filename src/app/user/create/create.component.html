@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class="user-card__title">Create new user</h1>
+  <app-form
+    [buttonTitle]="'Create'"
+    [buttonType]="'submit'"
+    [user]="user"
+    (submitClick)="onButtonCreateClick($event)"
+  ></app-form>
+</div>

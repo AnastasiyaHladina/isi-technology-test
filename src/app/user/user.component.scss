@@ -1,0 +1,91 @@
+@import './../../styles';
+.user-list__container {
+  padding: 50px 50px 0;
+  margin: 0;
+  display: grid;
+  grid-column-gap: 16px;
+  grid-template-columns: 6fr 0 4fr;
+}
+
+.content {
+  display: grid;
+  grid-row-gap: 16px;
+  align-content: start;
+}
+
+.user_list__container {
+  display: grid;
+  border-radius: 5px;
+  background-color: $color-ffffff;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 2px;
+
+  & > thead > tr > td {
+    padding: 16px;
+  }
+  & > tbody > tr:hover {
+    & > td {
+      background-color: $color-eff0f4;
+    }
+    cursor: pointer;
+  }
+  & > tbody > tr > td {
+    padding: 16px;
+    background-color: $color-f4f5f8;
+  }
+}
+
+.disabled {
+  background-color: $color-ebedf3;
+  color: $color-a4a4b5;
+}
+
+.alert-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: left;
+  padding: 16px 50px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

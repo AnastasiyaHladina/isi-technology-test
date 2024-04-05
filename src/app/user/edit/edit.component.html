@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="user-card__title"> {{ user.firstName }} {{ user.lastName }}</h1>
+  <app-form
+    [buttonTitle]="'Update'"
+    [buttonType]="'submit'"
+    [user]="user"
+    (submitClick)="onButtonUpdateClick($event)"
+    (deleteClick)="onButtonDeleteClick()"
+  ></app-form>
+</div>

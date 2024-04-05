@@ -1,0 +1,35 @@
+@import './../../../styles';
+
+.form_input {
+  display: grid;
+
+  & > input, select {
+    border: 1px solid $color-eef0f8;
+    background-color: $color-eef0f8;
+    padding: 7px;
+    border-radius: 5px;
+
+    &:focus-visible {
+      border: 1px solid #dadce4;
+      outline:none;
+    }
+  }
+
+  & > label {
+    margin: 16px 0 5px;
+  }
+
+  .input-danger {
+    border: 1px solid $color-ef7da0;
+  }
+
+  .mt-3 {
+    margin-top: 3px;
+  }
+}
+.form-buttons__container {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
