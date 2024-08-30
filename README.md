@@ -1,4 +1,4 @@
-**iSi Technology - Test Project**
+**Test Project**
 
 ---
 
